@@ -1,5 +1,4 @@
 import random
-import os
 
 PRIME = 257
 
@@ -136,26 +135,15 @@ def decrypt_file(in_path, out_path):
 if __name__ == "__main__":
     seed = 987654321
 
-encrypt_file(
-    "message.txt",
-    "cipher.bin",
-    seed
-)
+    encrypt_file(
+        "message.txt",
+        "cipher.bin",
+        seed
+    )
+    
+    decrypt_file(
+        "cipher.bin",
+        "restored.txt"
+    )
 
-decrypt_file(
-    "cipher.bin",
-    "restored.txt"
-)
-
-os.system('cls')
-'''with open("big.txt", "w") as f:
-    f.write("Hello World\n" * 1_000_000)'''
-
-with open("message.txt") as a:
-    original = a.read()
-
-with open("restored.txt") as b:
-    restored = b.read()
-
-print(original == restored)
 
