@@ -100,15 +100,15 @@ def decrypt_file(in_path, out_path):
 if __name__ == "__main__":
     seed = 987654321
 
-encrypt_file(
-    "message.txt",
-    "cipher.bin",
-    seed
-)
-
-decrypt_file(
-    "cipher.bin",
-    "restored.txt"
-)
+    encrypt_file(
+        "message.txt",
+        "cipher.bin",
+        seed
+    )
+    
+    decrypt_file(
+        "cipher.bin",
+        "restored.txt"
+    )
 
 
